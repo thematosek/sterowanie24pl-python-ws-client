@@ -168,16 +168,16 @@ if __name__ == "__main__":
 	daemon = MyDaemon('/tmp/daemon-example.pid')
 	if len(sys.argv) == 2:
 		if 'start' == sys.argv[1]:
-			print "Starting weatcher logger daemon"
+			print "Starting Lights Control client daemon"
 			print "["+bcolors.OKGREEN + "SUCCESS" +"]"+ bcolors.ENDC
 			daemon.start()
 		elif 'stop' == sys.argv[1]:
-			print "Stopping weatcher logger daemon"
+			print "Stopping Lights Control client daemon"
 			print "["+bcolors.OKGREEN + "SUCCESS" +"]"+ bcolors.ENDC
 			daemon.stop()
 		elif 'restart' == sys.argv[1]:
-			print "Stopping weatcher logger daemon"
-			print "Starting weatcher logger daemon"
+			print "Stopping Lights Control client daemon"
+			print "Starting Lights Control client daemon"
 			logfile = open('/var/log/lakewik/lakewik.log', 'a')
 			logfile.write('Restarting lakewik Logger Daemon')
 			logfile.close()
